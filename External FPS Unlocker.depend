@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1586855001 source:c:\users\vili\desktop\roblox\external fps unslocker\main.cpp
+	<Windows.h>
+	<iostream>
+	<vector>
+	<TlHelp32.h>
+	<tchar.h>
+
