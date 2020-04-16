@@ -6,7 +6,8 @@
 
 using namespace std;
 
-DWORD dwGetModuleBaseAddress(TCHAR* lpszModuleName, DWORD pID) {
+DWORD dwGetModuleBaseAddress(TCHAR* lpszModuleName, DWORD pID)
+{
 	DWORD dwModuleBaseAddress = 0;
 	HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, pID);
 	MODULEENTRY32 ModuleEntry32 = { 0 };
