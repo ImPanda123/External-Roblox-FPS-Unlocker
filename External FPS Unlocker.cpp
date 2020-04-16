@@ -44,7 +44,7 @@ int main()
 		GetWindowThreadProcessId(hGameWindow, &pID);
 		pHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pID);
 		DWORD clientBase = dwGetModuleBaseAddress(_T(moduleName), pID);
-		ReadProcessMemory(pHandle, (LPCVOID)(clientBase + 0x01EB0910), &baseAddress, sizeof(baseAddress), NULL);
+		ReadProcessMemory(pHandle, (LPCVOID)(clientBase + 0x01922A58), &baseAddress, sizeof(baseAddress), NULL);
 		AdressValue = baseAddress + 0x128;
 		WriteProcessMemory(pHandle, (LPVOID)(AdressValue), &NewAdressValue, sizeof(NewAdressValue), 0);
 		CloseHandle(pHandle);
