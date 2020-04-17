@@ -15,7 +15,8 @@ DWORD dwGetModuleBaseAddress(TCHAR* lpszModuleName, DWORD pID)
 
 	if (Module32First(hSnapshot, &ModuleEntry32))
 	{
-		do {
+		do 
+		{
 			if (_tcscmp(ModuleEntry32.szModule, lpszModuleName) == 0)
 			{
 				dwModuleBaseAddress = (DWORD)ModuleEntry32.modBaseAddr;
